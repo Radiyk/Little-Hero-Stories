@@ -14,7 +14,7 @@ public class WoodCollision : MonoBehaviour
     public GameObject parent;
     public Item item;
     private float dist;
-    private float minDist = 1.5f;
+    private float minDist = 2f;
 
 	private Transform player;
 
