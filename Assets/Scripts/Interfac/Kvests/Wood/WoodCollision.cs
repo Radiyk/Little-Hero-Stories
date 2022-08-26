@@ -36,7 +36,7 @@ public class WoodCollision : MonoBehaviour
             
         if (dist < minDist)
         {
-            Inventory.instance.PutInEmptySlot(item);
+            Inventory.instance.AddStackableItem(item);
             WoodText.wood += 1;
             anim.SetTrigger("OnCrash");
             MyAudioSource.Play();

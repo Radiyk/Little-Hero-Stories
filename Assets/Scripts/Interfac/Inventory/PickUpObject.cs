@@ -24,7 +24,7 @@ public class PickUpObject : MonoBehaviour
         dist = Vector3.Distance(transform.position, player.transform.position);
         if (dist < minDist)
         {
-            Inventory.instance.PutInEmptySlot(item);
+            Inventory.instance.AddStackableItem(item);
             Destroy (parent);
         }
     }

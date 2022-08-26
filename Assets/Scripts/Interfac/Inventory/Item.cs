@@ -12,6 +12,7 @@ public class Item : ScriptableObject
     public string Description = "";
     //public string EngDescription = "";
     public Sprite icon = null;
+    public int countItem;
 
     // [Header("Игровые характеристики")]
     // public int time;

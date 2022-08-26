@@ -25,10 +25,32 @@ public class Inventory : MonoBehaviour
         {
             if (inventorySlots[i].SlotItem == null)
             {
+                item.countItem = 1;
                 inventorySlots[i].PutInSlot(item);
                 return;
             }
         }
+       
+    }
+
+    public void AddStackableItem(Item item)
+    {
+        for (int i = 0; i < inventorySlots.Length; i++)
+        {
+            
+               if (inventorySlots[i].SlotItem != null)
+            {
+                if (inventorySlots[i].SlotItem.name == item.name)
+                {
+                    
+                    SlotInventory.countItem++;
+                    return;
+                }
+            } 
+               
+            
+        }
+        PutInEmptySlot(item);
     }
 
     public void Open()

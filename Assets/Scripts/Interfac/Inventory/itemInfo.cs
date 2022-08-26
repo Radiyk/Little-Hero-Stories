@@ -13,9 +13,11 @@ public class itemInfo : MonoBehaviour
     private Image icon;
 
     private Button buttonUse;
+    private Button buttonDelete;
     private Button buttonExit;
 
     private Item infoItem;
+    private SlotInventory CurrentSlot;
 
 
     private void Start() 
@@ -28,9 +30,11 @@ public class itemInfo : MonoBehaviour
         icon = transform.GetChild(2).GetComponent<Image>();
 
         buttonUse = transform.GetChild(3).GetComponent<Button>();
+        buttonDelete = transform.GetChild(4).GetComponent<Button>();
         buttonExit = transform.GetChild(5).GetComponent<Button>();
 
         buttonUse.onClick.AddListener(UseItem);
+        buttonDelete.onClick.AddListener(DeleteItem);
         buttonExit.onClick.AddListener(Close);
     }
 
@@ -46,10 +50,17 @@ public class itemInfo : MonoBehaviour
         UseOfItem.instance.Use(infoItem);
     }
 
-    public void Open(Item item)
+    public void DeleteItem()
+    {
+        CurrentSlot.ClearSlot();
+        Close();
+    }
+
+    public void Open(Item item, SlotInventory currentSlot)
     {
         ChangeInfo(item);
         infoItem = item;
+        CurrentSlot = currentSlot;
 
         gameObject.transform.localScale = Vector3.one;
     }
