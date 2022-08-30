@@ -155,7 +155,7 @@ GameObject:
   - component: {fileID: 4774676969199445687}
   - component: {fileID: 4774676969199445686}
   - component: {fileID: 4774676969199445681}
-  - component: {fileID: 4774676969199445684}
+  - component: {fileID: 398023138}
   m_Layer: 0
   m_Name: paper scroll
   m_TagString: Untagged
@@ -245,19 +245,18 @@ CircleCollider2D:
   m_Offset: {x: -0.004937172, y: 0}
   serializedVersion: 2
   m_Radius: 1.2302599
---- !u!114 &4774676969199445684
+--- !u!114 &398023138
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4774676969199445680}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1318d5176fe89e264a44fea57b19dbb7, type: 3}
+  m_Script: {fileID: 11500000, guid: 94637ff27bbeff793b9c6934fad591c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 1a959c1dc4a78969ca57c7564766c1f8, type: 2}
-  buttonLoot: {fileID: 344872715422548248, guid: 2208f3e0bed8fbf6db1847251d8affd9,
-    type: 3}
+  lootButton: {fileID: 0}
   parent: {fileID: 4774676967585668789}

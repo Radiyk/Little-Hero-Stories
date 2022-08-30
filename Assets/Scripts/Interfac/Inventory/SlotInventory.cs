@@ -10,7 +10,7 @@ public class SlotInventory : MonoBehaviour
     public Item SlotItem;
 
     Image icon;
-    Text count;
+    public Text count;
     Button button;
    
     void Start()

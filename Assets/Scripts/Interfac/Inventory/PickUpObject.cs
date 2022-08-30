@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class PickUpObject : MonoBehaviour
 {
     public Item item;
-    public Button buttonLoot;
+    public Button actionButton;
     public GameObject parent;
     private float dist;
     private float minDist = 1.5f;
@@ -14,9 +14,10 @@ public class PickUpObject : MonoBehaviour
 
     void Start()
     {
-        buttonLoot.GetComponent<Button>().onClick.AddListener(delegate {TakeLoot();});
+        actionButton.GetComponent<Button>().onClick.AddListener(delegate {TakeLoot();});
         player = GameObject.FindGameObjectWithTag("Player").transform;
     }
+    
 
 
     public void TakeLoot()
@@ -24,8 +25,13 @@ public class PickUpObject : MonoBehaviour
         dist = Vector3.Distance(transform.position, player.transform.position);
         if (dist < minDist)
         {
-            Inventory.instance.AddStackableItem(item);
-            Destroy (parent);
+            Inventory.instance.PutInEmptySlot(item);
+            DestroyObj();
         }
+    }
+
+    public virtual void DestroyObj()
+    {
+        Destroy(parent);
     }
 }

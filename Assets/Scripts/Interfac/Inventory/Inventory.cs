@@ -1,11 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
     public static Inventory instance;
     public Transform SlotsParent;
+    private int countInt;
+    private int newCountInt;
+    private string countText;
 
     public SlotInventory[] inventorySlots = new SlotInventory[9];
 
@@ -42,8 +46,12 @@ public class Inventory : MonoBehaviour
             {
                 if (inventorySlots[i].SlotItem.name == item.name)
                 {
+                    countText = inventorySlots[i].count.text;
                     
-                    SlotInventory.countItem++;
+                    countInt = int.Parse(countText);
+                    newCountInt++;
+                    inventorySlots[i].count.text = newCountInt.ToString();
+                    Debug.Log(newCountInt);
                     return;
                 }
             } 

@@ -10,6 +10,7 @@ public class PlayerTool : MonoBehaviour
     public GameObject shopButton;
     public GameObject tradeButton;
     public GameObject speechButton;
+    public GameObject fixButton;
 
 
     void Start()
@@ -39,6 +40,11 @@ public class PlayerTool : MonoBehaviour
 		{
             defaultButton.SetActive(false);
             speechButton.SetActive(true);
+		}
+		else if (Collision.CompareTag("Repair"))
+		{
+            defaultButton.SetActive(false);
+            fixButton.SetActive(true);
 		}
 
 	}

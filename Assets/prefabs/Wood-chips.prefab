@@ -9,10 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3335704015278331415}
-  - component: {fileID: 4877083932529433853}
   - component: {fileID: 6902866408789523569}
   - component: {fileID: 5797101671571844077}
   - component: {fileID: 5561675391454656455}
+  - component: {fileID: 4463082362706764248}
   m_Layer: 20
   m_Name: woodBody
   m_TagString: Untagged
@@ -35,21 +35,6 @@ Transform:
   m_Father: {fileID: 2251207144107514776}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4877083932529433853
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 609120252376907694}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c46589cd76c16c8d9334683382ef30f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buttonLoot: {fileID: 0}
-  parent: {fileID: 2251207144107514781}
-  item: {fileID: 11400000, guid: d4ea1fadfbfbfaec9bef4d5adc5b5dc8, type: 2}
 --- !u!58 &6902866408789523569
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -181,6 +166,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &4463082362706764248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 609120252376907694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 246ce05306169328b91c8ab649de6d6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: d4ea1fadfbfbfaec9bef4d5adc5b5dc8, type: 2}
+  actionButton: {fileID: 0}
+  parent: {fileID: 2251207144107514781}
 --- !u!1 &2251207144107514781
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class WoodText : MonoBehaviour
 {
-  public static int wood;
+  public static int woodForMost;
     Text text;
 
     void Start()
@@ -16,6 +16,6 @@ public class WoodText : MonoBehaviour
    
     void Update()
     {
-        text.text = wood.ToString();
+        text.text = woodForMost.ToString();
     }
 }

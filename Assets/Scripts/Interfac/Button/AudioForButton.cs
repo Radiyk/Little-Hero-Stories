@@ -9,6 +9,7 @@ public class AudioForButton : MonoBehaviour
     private AudioClip loot;
     private AudioClip shop;
     private AudioClip trade;
+    private AudioClip fix;
 
     public static int btnOptions;
 
@@ -20,6 +21,7 @@ public class AudioForButton : MonoBehaviour
         loot = MyAudioSource.clip = AudioClips[0];
         shop = MyAudioSource.clip = AudioClips[1];
         trade = MyAudioSource.clip = AudioClips[2];
+        fix = MyAudioSource.clip = AudioClips[3];
     }
 
     public void PlayMusic()
@@ -34,6 +36,9 @@ public class AudioForButton : MonoBehaviour
         break;
     case 3:
         MyAudioSource.PlayOneShot(trade);
+        break;
+    case 4:
+        MyAudioSource.PlayOneShot(fix);
         break;
 }
     }
